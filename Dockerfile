@@ -1,7 +1,11 @@
 FROM nginx:alpine
 
-WORKDIR /usr/share/nginx/html
-
-RUN doas apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community /usr/local/bin/hugo
+WORKDIR /app
 
 COPY . .
+
+RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
+
+RUN hugo --minify
+
+RUN cp -r public/. /usr/share/nginx/html
