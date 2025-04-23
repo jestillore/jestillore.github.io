@@ -1,0 +1,11 @@
+.DS_Store
+/.idea/
+/.vscode/
+
+# terraform specific
+/terraform.tfstate*
+/.terraform*/
+/*.plan
+/*.backup
+/*.tfstate
+/builds
