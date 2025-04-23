@@ -1,0 +1,4 @@
+baseURL = 'https://estillore.dev/'
+languageCode = 'en-us'
+title = 'Jillberth Estillore'
+theme = 'diary'
